@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>KitKat</title>
+    <title>Competitions Near Me</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -42,20 +42,21 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">KitKat</a>
+                 <a class="navbar-brand page-scroll" href="index.html">Competitions Near Me</a>
+                  <img href="index.html" src="https://i.imgur.com/V8IEq7q.png?1" alt="CompetitionsNearMe" width=55 height=55>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="navbar-brand page-scroll"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Community Recipes</a>
+                        <a class="page-scroll" href="#page-top">Competitions</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="profile.html">My Recipes</a>
+                        <a class="page-scroll" href="profile.html">My Profile</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -71,137 +72,188 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Community Recipes</div>
-                <div class="intro-heading">Find Your Favorite Recipes!</div>
-                <a href="#services" class="page-scroll btn btn-xl">Let's go!</a>
+                <div class="intro-lead-in">Competitions</div>
+                <div class="intro-heading">Browse through our many competitions.</div>
+                <a href="#portfolio" class="page-scroll btn btn-xl">Let's go!</a>
+                
             </div>
+            
         </div>
-    </header>
 
-    <!-- Services Section
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
+    </header>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Community</h2>
-                    <h3 class="section-subheading text-muted">Browse through our many recipes!</h3>
+                    <h2 class="section-heading"></h2>
+                    <h3 class="section-subheading text-muted">Browse through our many competitions!</h3>
+                    <h2>Search</h2>
+                    <form class ="search-bar-form">
+                        <input type = "text" class = "search-bar" id = "search-bar">
+                        <button type = "Search" onClick ="search()"class="search-button btn btn-default btn-xl sr-button">Submit</button>
+
+                    </form>
                 </div>
             </div>
+            <script>
+var Art = ["art", "Valdosta", "National", "Americas", "Paperworks", "LeMoyne", "Chain", "Parks", "Festival", "31601", "58707", "32301"]
+var Dance = ["dance", "Southwestern", "Invitational", "Paragon", "Open", "Dancesport", "Hollywood", "Championships", "75063", "06902", "91608"]
+var Hackathons = ["hackathons", "hackathon", "CodeRed", "Colony", "Civic", "Tech", "Challenge", "Harvard", "HackEd", "77204", "60606", "02138"]
+var Mathematics = ["mathematics", "American", "Math", "AMC", "Regions", "League", "ARML", "PUMAC", "48390", "30609", "08544"]
+var Piano = ["piano", "Cleveland", "International", "North", "American", "Biennial", "MTNA–STECHER", "HOROWITZ", "TWO", "44106", "53211", "32830"]
+var Tennis = ["tennis", "United", "States", "Association", "USTA", "48377", "90001", "32003"]
+
+function search(evt){
+    searchTerm = $(".search-bar").val()
+    
+    for (i = 0; i< Art.length; i++){
+        if (searchTerm == Art[i]){
+            //alert("Asparagus frittata")
+            $(".art").show()
+            break;
+        }
+        else{
+             $(".art").hide()
+             //document.getElementsByClassName("asparagus").style.display = 'none';
+        }
+    }
+    for (i = 0; i< Dance.length; i++){
+        if (searchTerm == Dance[i]){
+            //alert("Bruschetta")
+            $(".dance").show()
+            break;
+        }
+        else{
+             $(".dance").hide()
+             //document.getElementsByClassName("asparagus").style.display = 'none';
+        }
+    }
+    for (i = 0; i< Hackathons.length; i++){
+        if (searchTerm == Hackathons[i]){
+            //alert("Fruit Sushi")
+            $(".hackathons").show()
+            break;
+        }
+        else{
+             $(".hackathons").hide()
+             //document.getElementsByClassName("asparagus").style.display = 'none';
+        }
+    }
+    for (i = 0; i< Mathematics.length; i++){
+        if (searchTerm == Mathematics[i]){
+            //alert("Kebab")
+            $(".mathematics").show()
+            break;
+        }
+        else{
+             $(".mathematics").hide()
+             //document.getElementsByClassName("asparagus").style.display = 'none';
+        }
+    }
+    for (i = 0; i< Piano.length; i++){
+        if (searchTerm == Piano[i]){
+            //alert("Macarons")
+            $(".piano").show()
+            break;
+        }
+        else{
+             $(".piano").hide()
+             //document.getElementsByClassName("asparagus").style.display = 'none';
+        }
+    }
+    for (i = 0; i< .length; i++){
+        if (searchTerm == Tennis[i]){
+            //alert("Penne")
+            $(".tennis").show()
+            break;
+        }
+        else{
+             $(".tennis").hide()
+             //document.getElementsByClassName("asparagus").style.display = 'none';
+        }
+    }
+    evt.preventDefault()
+}
+             </script>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item art">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/4/7/1/EI1B03_frittata-with-asparagus_s4x3.jpg.rend.hgtvcom.616.462.jpeg" class="img-responsive" alt="">
+                        <img src="https://static3.depositphotos.com/1002263/147/i/950/depositphotos_1475670-stock-photo-oval-art-palette-with-paints.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Asparagus Frittata</h4>
+                        <h4 class="art Valdosta National Americas Paperworks LeMoyne Chain Parks Festival 31601 58707 32301">Art Competitions</h4>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item dance">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/8/22/0/WU0304H_bruschetta_s4x3.jpg.rend.hgtvcom.966.725.jpeg" class="img-responsive" alt="">
+                        <img src="https://bloximages.chicago2.vip.townnews.com/mtstandard.com/content/tncms/assets/v3/editorial/5/e6/5e6d15ec-f461-5d01-b6b2-130a11a05d4e/54a99bc897fae.image.gif" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Bruschetta</h4>
+                        <h4 class="dance Southwestern Invitational Paragon Open Dancesport Hollywood Championships 75063 06902 91608">Dance Competitions</h4>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item hackathons">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/9/7/1/MN0503H_fun-fruit-sushi_s4x3.jpg.rend.hgtvcom.616.462.jpeg" class="img-responsive" alt="">
+                        <img src="https://pbs.twimg.com/media/DLsLdjXWkAI1Yi-.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Fun Fruit Sushi<br></br></h4>
+                        <h4 class="hackathons hackathon CodeRed Colony Civic Tech Challenge Harvard HackEd 77204 60606 02138">Hackathons<br></br></h4>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item mathematics">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/8/2/FN_Aarti-Sequeira-Chicken-Kebabs_s4x3.jpg.rend.hgtvcom.966.725.jpeg" class="img-responsive" alt="">
+                        <img src="http://cliparting.com/wp-content/uploads/2016/05/Math-clipart-free-clipart-images-3.jpeg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Chicken Kebabs with No-Cook Peach Chutney</h4>
+                        <h4 class="mathematics American Math AMC Regions League ARML PUMAC 48390 30609 08544">Mathematics Competitions</h4>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item piano">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="https://img.vimbly.com/images/full_photos/macarons-6.jpg" class="img-responsive" alt="">
+                        <img src="http://clipartix.com/wp-content/uploads/2016/04/Jazz-piano-clipart-free-clipart-images-2.jpg" alt="">
                     </a>
                     <div class="portfolio-caption">
-                      <h4>French Macarons</h4>
+                      <h4 class="piano Cleveland International North American Biennial MTNA–STECHER HOROWITZ TWO 44106 53211 32830">Piano Competitions</h4>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-4 col-sm-6 portfolio-item tennis">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2004/5/28/0/ei1c12_penne_pesto.jpg.rend.hgtvcom.966.725.jpeg" class="img-responsive" alt="">
+                        <img src="http://www.clker.com/cliparts/6/O/x/i/u/d/tennis-racket-md.png" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Penne with Sun-Dried Tomato Pesto</h4>
+                        <h4 class="tennis United States Association USTA 48377 90001 32003">Tennis Competitions</h4>
                     </div>
                 </div>
             </div>
@@ -289,97 +341,7 @@
         </div>
     </section>-->
 
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Clients Aside -->
-    <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -472,27 +434,33 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Asparagus Frittata</h2>
+                                <h2>Art Competitions</h2>
                                 <p class="item-intro text-muted">
-<b>Ingredients:</b><br>
+<b>Competitions For You:</b><br>
 
-6 large eggs<br>
-2 tablespoons whipping cream<br>
-1/2 teaspoon salt<br>
-1/4 teaspoon freshly ground black pepper<br>
-1 tablespoon olive oil<br>
-1 tablespoon butter<br>
-12 ounces asparagus, trimmed, cut into 1/4 to 1/2-inch pieces<br>
-1 tomato, seeded, diced<br>
-Salt<br>
-3 ounces Fontina, diced<br>
+Valdosta National 2018: Zip Code 1) 31601 Valdosta - Georgia 
+   <a href="http://artdeadlines.com/artman/publish/valdosta.shtml">http://artdeadlines.com/artman/publish/valdosta.shtml</a>
+<br>
+
+    Americas 2018: Paperworks: Zip Code 2) 58707 Minot - North Dakota
+    <a href="https://www.minotstateu.edu/nac/_documents/pw_2018.pdf">https://www.minotstateu.edu/nac/_documents/pw_2018.pdf</a>
+
+<br>
+LeMoyne Chain of Parks Art Festival: Zip Code 3) 32301 Tallahassee - Florida
+    <a href="http://chainofparks.org/artists/">http://chainofparks.org/artists/</a>
+<br>
+
   </p>
 
                                 <p>
-                                  Recipe:<br>
-                                  Preheat the broiler. Whisk the eggs, cream, 1/2 teaspoon salt, and pepper in a medium bowl to blend. Set aside. Heat the oil and butter in a 9 1/2-inch-diameter nonstick ovenproof skillet over medium heat. Add the asparagus and saute until crisp-tender, about 2 minutes. Raise the heat to medium-high. Add the tomato and a pinch of salt and saute 2 minutes longer. Pour the egg mixture over the asparagus mixture and cook for a few minutes until the eggs start to set. Sprinkle with cheese. Reduce heat to medium-low and cook until the frittata is almost set but the top is still runny, about 2 minutes. Place the skillet under the broiler. Broil until the top is set and golden brown on top, about 5 minutes. Let the frittata stand 2 minutes. Using a rubber spatula, loosen the frittata from skillet and slide the frittata onto a plate.
+                                  Description:<br>
+                                  Art is a wonderful way of expressing creativity. It enables people to showcase their personalities through various methods including, painting, knitting, drawing and much more. Competitions are a great way to express unique artistic talents as well. 
+    Valdosta National is an art competition for 18 years old and above. There is a cash prize of $1,500, and this art competition is for people of all skill levels. <br>
+    Americas 2018 Paperworks is an art competition open to people with artistic talent of all skill levels. This competition requires more work since it includes specific and precise guidelines. This competition is also an exhibition where participants can display art work completed from the past two years.<br>
+    LeMoyne Chain of Parks Art Festival is a competition including a wide range of art from glass work, and pottery, to photography, and even jewelry. Each specific genre of art include its own guidelines that must be followed in order to be submitted. Open to all artists 18 years and older.
+
 </p><p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Pop-Up</button>
                             </div>
                         </div>
                     </div>
@@ -515,12 +483,33 @@ Salt<br>
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <h2>Project Heading</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                                <p><a href="http://designmodo.com/startup/?u=787">Chicken Kebabs with No-Cook Peach Chutney</a> is a website builder for professionals. Chicken Kebabs with No-Cook Peach Chutney contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                                <p>You can preview Chicken Kebabs with No-Cook Peach Chutney <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Dance Competitions</h2>
+                                <p class="item-intro text-muted">
+<b>Competitions For you:</b><br>
+
+ Southwestern Invitational: Zip Code 1) 75063- Texas-Dallas-
+<a href="http://ndca.org/events/calendar/2017/10/southwestern-invitational/">http://ndca.org/events/calendar/2017/10/southwestern-invitational/</a>
+
+<br>
+ 
+Paragon Open DanceSport Championships: Zip Code 2) 06902- Connecticut- Stamford-
+<a href="http://ndca.org/events/calendar/2017/10/paragon-open-dancesport-championships/">http://ndca.org/events/calendar/2017/10/paragon-open-dancesport-championships/</a>
+
+
+Hollywood Dancesport Championships: Zip Code 3) 91608- California- Los Angeles-
+<a href="http://ndca.org/events/calendar/2017/11/hollywood-dancesport-championships/">http://ndca.org/events/calendar/2017/11/hollywood-dancesport-championships/ </a>
+<br>
+
+                                </p>
+                                    Description:<br>
+                                    From hip-hop to jazz, there are many genres of dance suiting almost every personality. Dance expresses creativity. Performing and competing helps build self confidence and a stronger passion towards your dancing talent.<br>
+    Southwestern Invitational is a dance competition open to all ages in Dallas, Texas.<br>
+    Paragon Open Dancesport Championships are meant for the more professional and advanced dancers, hosted in Connecticut.<br>
+    Hollywood Dancesport Championships is open to all dancers, and even includes scholarship prize money.
+
+                                </p>
+                              </p><p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Pop-Up</button>
                             </div>
                         </div>
                     </div>
@@ -544,12 +533,40 @@ Salt<br>
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/Fun Fruit Sushi-preview.png" alt="">
-                                <p>Fun Fruit Sushi is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/Fun Fruit Sushi-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                  <!-- Project Details Go Here -->
+                                <h2>Hackathons</h2>
+                                <p class="item-intro text-muted">
+<b>Competitions For You:</b><br>
+
+MLH: CodeRed:  Zip code 1) 77204 - Texas - Houston 
+
+<br> 
+
+<a href="https://uhcode.red/">https://uhcode.red/</a>
+
+<br>
+
+TechNexus: Zip Code 2) 60606- Illinois- Chicago
+<a href="https://hackevents.co/hackathon/usa/chicago/5033-colony-5-2017-civic-tech-challenge-hackathon">https://hackevents.co/hackathon/usa/chicago/5033-colony-5-2017-civic-tech-challenge-hackathon</a>
+
+<br>
+
+Harvard HackEd: Zip Code 3) 02138- Massachusetts- Cambridge
+<a href="https://hackevents.co/hackathon/usa/cambridge/4916-harvard-hacked-2017">https://hackevents.co/hackathon/usa/cambridge/4916-harvard-hacked-2017</a>
+
+<br>
+
+  </p>
+
+                                <p>
+                                Descriptions:<br>
+                                Hackathons are a great platform to show your programming and engineering abilities, create cool projects, and meet people with same interests as you. Hackathons are cool because participants are allowed to create any form of code for any idea they have, from websites, and apps to unique gadgets as well.<br>
+Hackathons often last 12-36 hours and award prizes for the best projects created there.CodeRed is a free 24-hour event in Houston, Texas for high school and college students designed to get students to get creative and innovative in what they make and offers small workshops to help students in topics they may not be familiar with.<br>
+    Colony 5 2017 Civic Tech Challenge Hackathon is a 48-hour hackathon happening in Chicago from November 3-5. The hackathon makes students think in a more “into the future” ideas and projects.<br>
+    Harvard HackEd is a hackathon organized by HIVE (Harvard GSE Innovation & Ventures in Education) and provides a unique opportunity to meet new people think, design, create across 3 days! No technical or programming knowledge is needed.
+
+</p><p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Pop-Up</button>
                             </div>
                         </div>
                     </div>
@@ -557,7 +574,6 @@ Salt<br>
             </div>
         </div>
     </div>
-
     <!-- Portfolio Modal 4 -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -573,12 +589,37 @@ Salt<br>
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
-                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Mathematics Competitions</h2>
+                                <p class="item-intro text-muted">
+<b>Competitions For You:</b><br>
+  AMC 8: Zip code 1) 48390- MIchigan-Walled Lake
+  <br>
+<a href="https://amc-reg.maa.org/amc_external/SchoolSearchByZipCode.aspx">https://amc-reg.maa.org/amc_external/SchoolSearchByZipCode.aspx</a>
+
+<br>
+
+ARML:  Zip code 2) 30609 - Georgia - Athens
+<br>
+<a href="http://www.arml2.com/arml_2017/page/index.php?page_type=public&page=home">http://www.arml2.com/arml_2017/page/index.php?page_type=public&page=home</a>
+
+<br>
+
+PUMaC:Zip code 3) 08544 - New Jersey - Princeton
+<br>
+<a href="https://jason-shi-f9dm.squarespace.com/">https://jason-shi-f9dm.squarespace.com/</a>
+
+<br>
+
+</p>
+
+                                <p>
+                                Description:<br>
+                                The math competitions are a great way to show an in depth understanding of advanced math concepts. For each contest, there is regional, state, and sometimes a national/international level. Some competitions offer cash prizes and scholarships for thousands of dollars which could benefit a college student. Math competitions focus on the application aspects of math, or applying what you learn in the classroom. Whether you just want to further your understanding in math or you want to win scholarships for college, math contests can help.<br>
+The AMC is the American Math Competition, and has different versions - the 8 which is for middle schoolers, and the 10/12 which is for high schoolers. For the high school competition, there is a local, invitational, and national level.<br>
+ARML (American Regions Mathematics League) is an annual competition that being together the brightest math students across the nation. It provides an opportunity that allows students to meet, socialize, and compete against one another. The ARML consists of several rounds such as an individual round, a power question (proof-based round), and two relay rounds.<br>
+PUMAC math competition is a student-run math competition held at Princeton University. This math competition is meant to be very fun and interactive. It even includes puzzles and math bowl competitions. This is extremely interactive as it it not just a test, but includes many interactive math games and activities.
+</p><p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Pop-Up</button>
                             </div>
                         </div>
                     </div>
@@ -602,12 +643,27 @@ Salt<br>
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
-                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Piano Competitions</h2>
+                                <p class="item-intro text-muted">
+  <b>Competitions For You:</b><br>
+  Cleveland International Piano Competition: Zip Code 1) 44106 - Cleveland - Ohio-  
+<a href="https://www.clevelandpiano.org/competitions/young-artists">https://www.clevelandpiano.org/competitions/young-artists</a>
+<br>
+2018 North American Biennal Competition: Zipe Code 2)  53211 - Milwaukee - Wisconsin
+<a href="http://pianoarts.org/competitions/schedule-of-events/">http://pianoarts.org/competitions/schedule-of-events/</a>
+<br>
+THE MTNA–STECHER AND HOROWITZ TWO PIANO COMPETITION: Zip Code 3) 32830  Lake Buena Vista - Florida
+<a href="https://www.mtna.org/MTNA/Engage/Two_Piano_Competition/Two_Piano_Competition.aspx">https://www.mtna.org/MTNA/Engage/Two_Piano_Competition/Two_Piano_Competition.aspx</a>
+<br>
+</p>
+
+                                <p>Description:<br>
+                                     Piano is a popular musical instrument played by many people all over the world. Piano not only helps compose and play music, but also helps singers and choirs with notes. Playing the piano is a great skill is and involves a lot of concentration and coordination, due to all of the notes and keys you need to memorize in order to play the music. Playing the piano requires a lot of practice to play perfectly. With a some hard work and practice, everyone will be able to play songs of their choice on the piano.<br>
+    The Cleveland International Piano Competition is a one day competition for ages 12-17 divided into a junior and senior category where they perform 3 solo rounds and 1 final round with the Canton Symphony Orchestra. After many rounds, the finalists compete at Maltz Performing Art Center at Case Western Reserve University. It is a great opportunity for young pianists and great for other to come and watch.<br>
+    The 2018 North American Biennial Competition is challenging competition for students in the age of 16-21 that live in the North America. Competitors apply and send their videos and the chosen competitors are invited to Milwaukee,Wisconsin to compete and perform with Milwaukee Symphony Orchestra.<br>
+    THE MTNA–STECHER AND HOROWITZ TWO PIANO COMPETITION is duo piano competition where competitors submit their video and selected competitors come down Lake Buena Vista, Florida to compete in a final round and win large prizes.
+</p>
+<p>                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Pop-Up</button>
                             </div>
                         </div>
                     </div>
@@ -631,12 +687,27 @@ Salt<br>
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
-                                <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
-                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Tennis Competitions</h2>
+                                <p class="item-intro text-muted">
+<b>Competitions For You:</b><br>
+Zip code 1) 48377-Michigan- Novi 
+<a href="http://tennislink.usta.com/Tournaments/TournamentHome/Tournament.aspx?T=201721">http://tennislink.usta.com/Tournaments/TournamentHome/Tournament.aspx?T=201721</a>
+<br>
+Zip code 2) 90001- California- Los Angeles
+<a href="http://tennislink.usta.com/Tournaments/TournamentHome/Tournament.aspx?T=199162">http://tennislink.usta.com/Tournaments/TournamentHome/Tournament.aspx?T=199162</a>
+<br>
+Zip code 3) 32003- Florida- Orange Park 
+<a href="http://tennislink.usta.com/Tournaments/TournamentHome/Tournament.aspx?T=191250">http://tennislink.usta.com/Tournaments/TournamentHome/Tournament.aspx?T=191250</a>
+<br>
+
+</p>
+
+                                <p>Description:<br>
+                                  Tennis is a sport that greatly engages the body as well as the mind. It's a great sport to maintain your health, fitness, strength, and agility.  Through these competitions, you can improve your tennis skills, stay healthy, and have fun at the same time. From beginner level to national levels, there are tournaments for all ages and skill levels.<br>
+    The following tennis tournaments are all conducted through the USTA, (United States Tennis Association). Along with tennis tournaments for all ages, the USTA also provides tips and instruction, health tips, and instruction and coaching on tennis. The USTA has many coaching programs open to everyone, designed to help people improve their tennis skills to help prepare for competitions.
+
+                                </p><p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Pop-Up</button>
                             </div>
                         </div>
                     </div>
